@@ -30,3 +30,4 @@ public class S3Config {
 		return s3client;
 	}
 }
+
