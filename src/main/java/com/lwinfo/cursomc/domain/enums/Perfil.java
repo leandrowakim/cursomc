@@ -2,8 +2,8 @@ package com.lwinfo.cursomc.domain.enums;
 
 public enum Perfil {
 
-	ADMIN(1,"ROLER_ADMIN"),
-	CLIENTE(2,"ROLER_CLIENTE");	
+	ADMIN(1,"ROLE_ADMIN"),
+	CLIENTE(2,"ROLE_CLIENTE");	
 	
 	private int cod;
 	private String descricao;

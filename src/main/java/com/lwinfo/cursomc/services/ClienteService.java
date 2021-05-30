@@ -58,7 +58,7 @@ public class ClienteService {
 		
 		UserSS user = UserService.authenticated();
 		if (user == null || !user.hasHole(Perfil.ADMIN) && !id.equals(user.getId())) {
-			throw new AuthorizationException("Acesso negado!");
+			throw new AuthorizationException("Acesso negado");
 		}
 				
 		Optional<Cliente> obj = repo.findById(id);
@@ -144,7 +144,7 @@ public class ClienteService {
 	public URI uploadFilePicture(MultipartFile multipartFile) {		
 		UserSS user = UserService.authenticated();
 		if (user == null) {
-			throw new AuthorizationException("Acesso negado!");			
+			throw new AuthorizationException("Acesso negado");			
 		}
 		
 		BufferedImage jpgImage = imageService.getJpgImageFromFile(multipartFile);
