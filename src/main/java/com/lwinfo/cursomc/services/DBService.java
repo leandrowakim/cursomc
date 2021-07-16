@@ -194,7 +194,7 @@ public class DBService {
 		
 		Cidade c1 = new Cidade(null, "Rio de Janeiro", est1);
 		Cidade c2 = new Cidade(null, "São Paulo", est2);
-		Cidade c3 = new Cidade(null, "Campinas", est2);
+		Cidade c3 = new Cidade(null, "Suzano", est2);
 		
 		est1.getCidades().addAll(Arrays.asList(c1));
 		est2.getCidades().addAll(Arrays.asList(c2, c3));
@@ -202,15 +202,15 @@ public class DBService {
 		estadoRepo.saveAll(Arrays.asList(est1, est2));
 		cidadeRepo.saveAll(Arrays.asList(c1, c2, c3));
 		
-		Cliente cli1 = new Cliente(null, "Leandro Silva", "leandrorws@terra.com.br", "98754262704", TipoCliente.PESSOAFISICA, pe.encode("123"));
-		cli1.getTelefones().addAll(Arrays.asList("21967241234","21971701234"));
+		Cliente cli1 = new Cliente(null, "Leandro Wakim", "leandrowakim@gmail.com", "98754262704", TipoCliente.PESSOAFISICA, pe.encode("123"));
+		cli1.getTelefones().addAll(Arrays.asList("21967241571","21971700093"));
 
-		Cliente cli2 = new Cliente(null, "Leandro Wakim", "leandrowakim@gmail.com", "98754262704", TipoCliente.PESSOAFISICA, pe.encode("123"));
+		Cliente cli2 = new Cliente(null, "Leandro Silva", "leandrowakim@msn.com", "98754262704", TipoCliente.PESSOAFISICA, pe.encode("123"));
 		cli2.addPerfil(Perfil.ADMIN);
-		cli2.getTelefones().addAll(Arrays.asList("21967241571","21971700093"));
+		cli2.getTelefones().addAll(Arrays.asList("21967241234","21971701234"));
 		
 		Endereco e1 = new Endereco(null, "Rua Lopo Diniz", "155", null, "Vicente de Carvalho", "21371-080", cli1, c1);
-		Endereco e2 = new Endereco(null, "Rua Madame pommery", "1260", "Apto 22", "Vila Uupes", "08615-090", cli1, c2);
+		Endereco e2 = new Endereco(null, "Rua Madame Pommery", "1260", "Apto 22", "Vila Uupes", "08615-090", cli1, c3);
 		Endereco e3 = new Endereco(null, "Rua Lopo Diniz", "155", null, "Vicente de Carvalho", "21371-080", cli2, c1);
 		
 		cli1.getEnderecos().addAll(Arrays.asList(e1,e2));
