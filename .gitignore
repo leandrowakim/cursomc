@@ -1,3 +1,2 @@
-nao_comitar
-src/main/resources/application.properties
-target/classes/application.properties
+teste.txt
+src/main/resources/*.properties
