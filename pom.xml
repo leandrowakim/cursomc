@@ -104,19 +104,14 @@
 		
 		<dependency>
 			<groupId>com.heroku.sdk</groupId>
-<<<<<<< HEAD
 			<artifactId>heroku-maven-plugin</artifactId>
 			<version>3.0.4</version>
 		</dependency>		
-=======
-			<artifactId>heroku-deploy</artifactId>
-		</dependency>
 		
 		<dependency>
 			<groupId>org.apache.maven</groupId>
 			<artifactId>maven-plugin-api</artifactId>
 		</dependency>
->>>>>>> 3d66cc56240602ba4bb074ea1e42b91987628d51
 
 	</dependencies>
 
