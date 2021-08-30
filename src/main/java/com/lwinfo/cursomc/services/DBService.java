@@ -36,7 +36,7 @@ import com.lwinfo.cursomc.repositories.ProdutoRepository;
 public class DBService {
 
 	@Autowired
-	private BCryptPasswordEncoder pe;
+	private BCryptPasswordEncoder passEncoder;
 	@Autowired
 	private CategoriaRepository categoriaRepo;
 	@Autowired
@@ -202,10 +202,10 @@ public class DBService {
 		estadoRepo.saveAll(Arrays.asList(est1, est2));
 		cidadeRepo.saveAll(Arrays.asList(c1, c2, c3));
 		
-		Cliente cli1 = new Cliente(null, "Leandro Wakim", "leandrowakim@gmail.com", "98754262704", TipoCliente.PESSOAFISICA, pe.encode("123"));
+		Cliente cli1 = new Cliente(null, "Leandro Wakim", "leandrowakim@gmail.com", "98754262704", TipoCliente.PESSOAFISICA, passEncoder.encode("123"));
 		cli1.getTelefones().addAll(Arrays.asList("21967241571","21971700093"));
 
-		Cliente cli2 = new Cliente(null, "Leandro Silva", "leandrowakim@msn.com", "98754262704", TipoCliente.PESSOAFISICA, pe.encode("123"));
+		Cliente cli2 = new Cliente(null, "Leandro Silva", "leandrowakim@msn.com", "98754262704", TipoCliente.PESSOAFISICA, passEncoder.encode("123"));
 		cli2.addPerfil(Perfil.ADMIN);
 		cli2.getTelefones().addAll(Arrays.asList("21967241234","21971701234"));
 		
