@@ -1,2 +1,7 @@
+.apt*
+.metadata*
+.settings*
+.vscode*
 src/main/resources/*.properties
 target*
+.classpath
