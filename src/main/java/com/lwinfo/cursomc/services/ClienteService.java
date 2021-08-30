@@ -34,7 +34,7 @@ import com.lwinfo.cursomc.services.exceptions.ObjectNotFoundException;
 public class ClienteService {
 
 	@Autowired
-	private BCryptPasswordEncoder pe;
+	private BCryptPasswordEncoder passEncoder;
 	
 	@Autowired
 	private ClienteRepository repo;
@@ -120,7 +120,7 @@ public class ClienteService {
 	public Cliente fromDTO(ClienteNewDTO objDto) {
 		Cliente cli = new Cliente(null, objDto.getNome(), objDto.getEmail(), 
 				objDto.getCpfOuCnpj(), TipoCliente.toEnum(objDto.getTipo()),
-				pe.encode(objDto.getSenha()));
+				passEncoder.encode(objDto.getSenha()));
 		Cidade cid = new Cidade(objDto.getCidadeId(), null, null);
 		Endereco end = new Endereco(null, objDto.getLogradouro(), objDto.getNumero(), 
 				objDto.getComplemento(), objDto.getBairro(), objDto.getCep(), 
